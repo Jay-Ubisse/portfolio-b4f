@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  background-color: white;
+}
+
+html {
+  font-size: 20px;
+}
+
+/*Variáveis*/
+:root {
+  /*colors*/
+  --surface: #d4a373;
+  --primary: #023e8a;
+  --secondary: #faedcd;
+
+  /*Typography*/
+  --paragraph: 1rem;
+  --title1: 2.5rem;
+  --title2: 2rem;
+  --title3: 1.75rem;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header > nav > a {
+  text-decoration: none;
+  color: black;
+  font-size: var(--paragraph);
+  font-weight: 300;
+}
+
+header > nav > a:hover {
+  color: var(--primary);
+}
+
+header > section > h1 > span:first-child {
+  font-weight: bold;
+}
+
+header > section {
+  display: flex;
+  gap: 10px;
+}
+
+header > section > h1 > span:last-child {
+  font-weight: 300;
+  font-size: var(--paragraph);
+}
+
+/*Para celular*/
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  header > nav {
+    display: none;
+  }
+
+  header > section > div {
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary);
+  }
+
+  header > section > h1 > span {
+    display: block;
+  }
+  header > section {
+    align-items: flex-start;
+  }
+  header > section > div {
+    margin-top: 12px;
+  }
+}
+
+/*Para tablet*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+/*Para desktop*/
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  header > nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  header > div {
+    display: none;
+  }
+  header > section > div {
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary);
+  }
+  header > section {
+    align-items: center;
+  }
+
+  header > section > h1 > span:last-child::before {
+    content: "/";
+  }
+}
+
+/*Para telas maiores*/
+@media screen and (min-width: 1281px) {
+}
